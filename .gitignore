@@ -1,4 +1,51 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# My configurations:
+db.ini
+deploy_key_rsa
+
+#java
 *.class
+*.classpath
+*.project
+*.settings
+.classpath
+.project
+.temp
+target/
+*classpath
+.gitignore
+*.gitignore
+bin
+
+*.class
+/**/.class
+/*/.*
+/*/*/.*
+/*/*/*/.*
+/*/*/*/*/.*
+/*/class/*
+/*/classes/*
+/*/.gitignore
+/*/*/target/*
+/**/target/*
+/*/*/*/target/*
+
+*.log
+/**/.log
+*_Main.java
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -8,5 +55,26 @@
 *.war
 *.ear
 
+inner.properties
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/*/.settings/*
+**/target/**
+/*/bin/*
+/*/*/bin/*
+/*/log/*
+# jetbrains project files
+/*/.idea/
+.DS_Store
+.springBeans
+*.iml
+# eclipse project files
+**/.classpath
+*.project
+
+.settings/*
+
+#idea
+.idea/*
+**/backList
