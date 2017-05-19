@@ -5,9 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
-/**
- * Created by Rayee on 2017/3/29.
- */
 public class TaskManager {
     private TaskManager(){}
     //任务池

@@ -11,9 +11,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
-/**
- * Created by Rayee on 2017/3/29.
- */
 public class SerializeUtil {
 
     public static Logger logger = Logger.getLogger(SerializeUtil.class);

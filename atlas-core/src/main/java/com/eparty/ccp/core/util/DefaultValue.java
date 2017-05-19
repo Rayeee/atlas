@@ -1,8 +1,5 @@
 package com.eparty.ccp.core.util;
 
-/**
- * Created by Rayee on 2017/4/20.
- */
 public class DefaultValue {
 
     public static Object getDefaultValue(Class<?> clazz) {

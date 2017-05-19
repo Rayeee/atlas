@@ -1,8 +1,5 @@
 package com.eparty.ccp.web.framework;
 
-/**
- * Created by Rayee on 2017/3/31.
- */
 public class ResponseEntity<E> {
 
     private String code;

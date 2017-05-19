@@ -14,9 +14,6 @@ import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
 
-/**
- * Created by zhugongyi on 2017/4/20.
- */
 @Aspect
 @Component
 public class MetricsAspect {

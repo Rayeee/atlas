@@ -24,9 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by zhugongyi on 2017/5/19.
- */
 public class HttpUtils {
 
     private static final Logger logger = Logger.get();

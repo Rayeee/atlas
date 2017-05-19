@@ -8,9 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * Created by Rayee on 2017/4/5.
- */
 public abstract class WebAPIBaseController {
 
     private static final Logger logger = Logger.get();

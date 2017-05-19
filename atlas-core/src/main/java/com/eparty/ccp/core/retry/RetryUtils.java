@@ -4,9 +4,6 @@ import com.eparty.ccp.contract.exception.ServiceException;
 import com.eparty.ccp.core.constant.BaseMessageConstants;
 import com.joindata.inf.common.util.log.Logger;
 
-/**
- * Created by zhugongyi on 2017/5/10.
- */
 public class RetryUtils {
 
     private static final Logger logger = Logger.get();

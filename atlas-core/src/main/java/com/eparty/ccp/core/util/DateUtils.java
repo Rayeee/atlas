@@ -3,9 +3,6 @@ package com.eparty.ccp.core.util;
 import java.sql.Timestamp;
 import java.util.*;
 
-/**
- * Created by Rayee on 2017/3/23.
- */
 public class DateUtils {
 
     //获取当天的开始时间

@@ -2,9 +2,6 @@ package com.eparty.ccp.core.constant;
 
 import com.eparty.ccp.contract.exception.SystemException;
 
-/**
- * Created by Rayee on 2017/3/29.
- */
 public interface BaseMessageConstants {
 
     //异常code

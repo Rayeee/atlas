@@ -2,9 +2,6 @@ package com.eparty.ccp.core.proxy;
 
 import java.lang.annotation.*;
 
-/**
- * Created by Rayee on 2017/4/20.
- */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Metrics {

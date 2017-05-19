@@ -7,9 +7,6 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.lang.reflect.Type;
 
-/**
- * Created by Rayee on 2017/3/29.
- */
 public class JsonUtils {
 
     public static final Gson gson = new Gson();

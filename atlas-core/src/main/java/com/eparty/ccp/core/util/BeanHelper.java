@@ -12,9 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Rayee on 2017/4/5.
- */
 public class BeanHelper {
 
     private static final Logger logger = Logger.get();

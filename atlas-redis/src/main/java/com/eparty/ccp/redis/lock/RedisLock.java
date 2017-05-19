@@ -7,9 +7,6 @@ import com.joindata.inf.common.util.log.Logger;
 
 import java.util.UUID;
 
-/**
- * Created by Rayee on 2017/3/22.
- */
 public class RedisLock {
 
     private Logger logger = Logger.get();

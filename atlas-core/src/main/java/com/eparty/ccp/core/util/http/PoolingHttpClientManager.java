@@ -7,9 +7,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.pool.PoolStats;
 
-/**
- * Created by zhugongyi on 2017/5/19.
- */
 public class PoolingHttpClientManager {
 
     private final PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
