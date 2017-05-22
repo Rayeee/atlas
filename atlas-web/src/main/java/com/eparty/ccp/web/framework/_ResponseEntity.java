@@ -1,6 +1,6 @@
 package com.eparty.ccp.web.framework;
 
-public class ResponseEntity<E> {
+public class _ResponseEntity<E> {
 
     private String code;
     private String msg;
@@ -30,26 +30,26 @@ public class ResponseEntity<E> {
         this.data = data;
     }
 
-    public ResponseEntity(String code, String msg, E data) {
+    public _ResponseEntity(String code, String msg, E data) {
         super();
         this.code = code;
         this.msg = msg;
         this.data = data;
     }
 
-    public static <E> ResponseEntity<E> success() {
+    public static <E> _ResponseEntity<E> success() {
         return success(null);
     }
 
-    public static <E> ResponseEntity<E> success(E data) {
-        return new ResponseEntity<>("200", "success", data);
+    public static <E> _ResponseEntity<E> success(E data) {
+        return new _ResponseEntity<>("200", "success", data);
     }
 
-    public static <E> ResponseEntity<E> fail(String message) {
-        return new ResponseEntity<>(null, message, null);
+    public static <E> _ResponseEntity<E> fail(String message) {
+        return new _ResponseEntity<>(null, message, null);
     }
 
-    public static <E> ResponseEntity<E> fail(String code, String message) {
-        return new ResponseEntity<>(code, message, null);
+    public static <E> _ResponseEntity<E> fail(String code, String message) {
+        return new _ResponseEntity<>(code, message, null);
     }
 }
