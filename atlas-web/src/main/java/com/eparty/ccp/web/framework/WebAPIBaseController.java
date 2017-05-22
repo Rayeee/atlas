@@ -2,7 +2,6 @@ package com.eparty.ccp.web.framework;
 
 import com.eparty.ccp.contract.exception.ServiceException;
 import com.eparty.ccp.contract.exception.SystemException;
-import com.joindata.inf.boot.sterotype.RestResponse;
 import com.joindata.inf.common.util.log.Logger;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -21,15 +20,15 @@ public abstract class WebAPIBaseController {
             if (StringUtils.isEmpty(serviceException.getCode())) {
                 return RestResponse.fail(serviceException.getMessage());
             } else {
-                return RestResponse.fail(Integer.valueOf(serviceException.getCode()), serviceException.getMessage());
+                return RestResponse.fail(serviceException.getCode(), serviceException.getMessage());
             }
         } else if (e instanceof SystemException || e.getCause() instanceof SystemException) {
             SystemException systemException = (SystemException) (e instanceof SystemException ? e : e.getCause());
             logger.error("request请求【系统异常】code = {},msg = {}", systemException.getCode(), systemException.getMessage());
-            return RestResponse.fail(Integer.valueOf(systemException.getCode()), e.getMessage());
+            return RestResponse.fail(systemException.getCode(), e.getMessage());
         } else {
             logger.error("request请求【未知异常】", e);
-            return RestResponse.fail(50000, e.getMessage());
+            return RestResponse.fail(e.getMessage());
         }
     }
 
