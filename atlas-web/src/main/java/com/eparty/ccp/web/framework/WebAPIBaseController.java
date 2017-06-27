@@ -25,10 +25,10 @@ public abstract class WebAPIBaseController {
         } else if (e instanceof SystemException || e.getCause() instanceof SystemException) {
             SystemException systemException = (SystemException) (e instanceof SystemException ? e : e.getCause());
             logger.error("request请求【系统异常】code = {},msg = {}", systemException.getCode(), systemException.getMessage());
-            return RestResponse.fail(systemException.getCode(), e.getMessage());
+            return RestResponse.fail(systemException.getCode(), "系统异常，请稍后重试");
         } else {
             logger.error("request请求【未知异常】", e);
-            return RestResponse.fail(e.getMessage());
+            return RestResponse.fail("系统异常，请稍后重试");
         }
     }
 

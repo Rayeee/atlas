@@ -19,6 +19,8 @@ public class RestResponse<E> {
 
     private String message;
 
+    private long systemTime = System.currentTimeMillis();
+
     public static final <E> RestResponse<E> success() {
         return new RestResponse<>(200, null, "success");
     }
@@ -43,12 +45,14 @@ public class RestResponse<E> {
         this.code = code;
         this.message = message;
         this.model = model;
+        this.systemTime = systemTime;
     }
 
     public RestResponse(int code, String errorCode, String message) {
         this.code = code;
         this.errorCode = errorCode;
         this.message = message;
+        this.systemTime = systemTime;
     }
 
     public int getCode() {
@@ -89,5 +93,13 @@ public class RestResponse<E> {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public long getSystemTime() {
+        return systemTime;
+    }
+
+    public void setSystemTime(long systemTime) {
+        this.systemTime = systemTime;
     }
 }

@@ -66,7 +66,7 @@ public class MetricsAspect {
                 return defaultResult;
             } else {
                 logger.error("{} 调用【{}】-【系统异常】-【参数={}】-【返回默认值defaultResult={}】", metrics.desc(), metricsName, inputJson, e);
-                throw new SystemException("system_err", e.getMessage(), e.getCause());
+                throw new SystemException("50000", e.getMessage(), e.getCause());
             }
         }
     }

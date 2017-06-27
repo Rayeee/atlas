@@ -3,13 +3,15 @@ package com.eparty.ccp.core.util;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
 
 public class JsonUtils {
 
-    public static final Gson gson = new Gson();
+    public static final Gson gson = new GsonBuilder().serializeNulls().create();
+
     public static ObjectMapper objectMapper = new ObjectMapper();
 
 
