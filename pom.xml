@@ -12,7 +12,7 @@
     <groupId>com.eparty.ccp</groupId>
     <artifactId>atlas-parent</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.4-RELEASE</version>
 
     <modules>
         <module>atlas-core</module>
@@ -23,7 +23,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <atlas.version>0.0.3-SNAPSHOT</atlas.version>
+        <atlas.version>0.0.4-RELEASE</atlas.version>
     </properties>
 
     <dependencies>
