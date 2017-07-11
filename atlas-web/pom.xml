@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.eparty.ccp</groupId>
         <artifactId>atlas-parent</artifactId>
-        <version>0.0.4-RELEASE</version>
+        <version>0.0.5-RELEASE</version>
     </parent>
 
     <artifactId>atlas-web</artifactId>
