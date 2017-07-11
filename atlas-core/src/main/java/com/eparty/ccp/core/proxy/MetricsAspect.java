@@ -20,7 +20,8 @@ public class MetricsAspect {
 
     private Logger logger = Logger.get();
 
-    public MetricsAspect(){}
+    public MetricsAspect() {
+    }
 
     @Around("execution(* com.eparty.ccp..*.*(..)) && @annotation(com.eparty.ccp.core.proxy.Metrics))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
