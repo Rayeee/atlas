@@ -66,7 +66,7 @@ public class MetricsAspect {
                 logger.error("{} 调用【{}】-【系统异常-忽略异常】-【参数={}】-【返回默认值defaultResult={}】", metrics.desc(), metricsName, inputJson, JsonUtils.toJson(defaultResult), e);
                 return defaultResult;
             } else {
-                logger.error("{} 调用【{}】-【系统异常】-【参数={}】-【返回默认值defaultResult={}】", metrics.desc(), metricsName, inputJson, e);
+                logger.error("{} 调用【{}】-【系统异常】-【参数={}】", metrics.desc(), metricsName, inputJson, e);
                 throw e;
             }
         }
