@@ -22,4 +22,8 @@
 
     <bean id = "metricsAspect" class="com.eparty.ccp.core.proxy.MetricsAspect"/>
 
+    <bean id="testService" class="com.eparty.ccp.core.test.TestService"/>
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
 </beans>

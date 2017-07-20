@@ -30,7 +30,7 @@ public class MetricsAspect {
         if (metrics == null) {
             metrics = defaultMetrics;
         }
-        String metricsName = StringUtils.isEmpty(metrics.name()) ? signature.getDeclaringTypeName() + "-" + signature.getName() : metrics.name();
+        String metricsName = signature.getDeclaringTypeName() + "-" + signature.getName();
         String inputJson = null;
         //记录入参
         if (metrics.logInput()) {
@@ -78,11 +78,6 @@ public class MetricsAspect {
         @Override
         public Class<? extends Annotation> annotationType() {
             return null;
-        }
-
-        @Override
-        public String name() {
-            return "";
         }
 
         @Override
