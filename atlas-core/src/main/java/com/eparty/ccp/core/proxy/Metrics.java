@@ -7,6 +7,13 @@ import java.lang.annotation.*;
 public @interface Metrics {
 
     /**
+     * 方法名称
+     * @return
+     */
+    @Deprecated
+    String name() default "";
+
+    /**
      * 方法描述
      * @return
      */

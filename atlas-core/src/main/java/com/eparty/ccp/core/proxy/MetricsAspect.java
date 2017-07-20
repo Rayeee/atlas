@@ -23,14 +23,14 @@ public class MetricsAspect {
     public MetricsAspect() {
     }
 
-    @Around("execution(* com.eparty.ccp..*.*(..)) && @annotation(com.eparty.ccp.core.proxy.Metrics))")
+    @Around("@annotation(com.eparty.ccp.core.proxy.Metrics))")
     public Object around(ProceedingJoinPoint point) throws Throwable {
         MethodSignature signature = (MethodSignature) point.getSignature();
         Metrics metrics = signature.getMethod().getAnnotation(Metrics.class);
         if (metrics == null) {
             metrics = defaultMetrics;
         }
-        String metricsName = signature.getDeclaringTypeName() + "-" + signature.getName();
+        String metricsName = signature.getDeclaringTypeName() + " - " + signature.getName();
         String inputJson = null;
         //记录入参
         if (metrics.logInput()) {
@@ -81,18 +81,23 @@ public class MetricsAspect {
         }
 
         @Override
+        public String name() {
+            return "";
+        }
+
+        @Override
         public String desc() {
             return "";
         }
 
         @Override
         public boolean logInput() {
-            return false;
+            return true;
         }
 
         @Override
         public boolean logOutput() {
-            return false;
+            return true;
         }
 
         @Override
