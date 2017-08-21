@@ -1,10 +1,10 @@
 package com.eparty.ccp.core.retry;
 
-import com.eparty.ccp.contract.exception.ServiceException;
+import com.joindata.inf.common.basic.exceptions.BizException;
 
 @FunctionalInterface
 public interface RetryFun<T> {
 
-    T execute() throws ServiceException;
+    T execute() throws BizException;
 
 }

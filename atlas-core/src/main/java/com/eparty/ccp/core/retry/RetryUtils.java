@@ -1,14 +1,14 @@
 package com.eparty.ccp.core.retry;
 
-import com.eparty.ccp.contract.exception.ServiceException;
 import com.eparty.ccp.core.constant.BaseMessageConstants;
+import com.joindata.inf.common.basic.exceptions.BizException;
 import com.joindata.inf.common.util.log.Logger;
 
 public class RetryUtils {
 
     private static final Logger logger = Logger.get();
 
-    public static <T> T retry(RetryFun<T> fun, int count, Class<?> clazz, String methodName) throws ServiceException {
+    public static <T> T retry(RetryFun<T> fun, int count, Class<?> clazz, String methodName) throws BizException {
         int i = 1;
         //使用do...while语句保证任务至少执行一次
         do {
@@ -19,8 +19,8 @@ public class RetryUtils {
                 logger.info("第{}执行【{}】重试任务【成功】", i, methodName);
                 return result;
             } catch (Exception e) {
-                if (e instanceof ServiceException) {
-                    logger.error("第【{}】次执行【{}】重试任务时【业务异常】msg={}不需重试", i, methodName, e.getMessage());
+                if (e instanceof BizException) {
+                    logger.error("第【{}】次执行【{}】重试任务时【业务异常】msg={}不需重试", i, methodName, ((BizException) e).getErrorEntity().getMessage());
                     throw e;
                 } else {
                     //结束时抛出异常

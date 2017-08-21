@@ -1,7 +1,6 @@
 package com.eparty.ccp.core.proxy;
 
 import com.eparty.ccp.contract.exception.ServiceException;
-import com.eparty.ccp.contract.exception.SystemException;
 import com.eparty.ccp.core.util.DefaultValue;
 import com.eparty.ccp.core.util.JsonUtils;
 import com.joindata.inf.common.util.log.Logger;

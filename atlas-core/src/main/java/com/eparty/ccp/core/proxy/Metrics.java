@@ -20,16 +20,16 @@ public @interface Metrics {
     String desc() default "";
 
     /**
-     * 是否打印入参，默认不打印
+     * 是否打印入参，默认打印
      * @return
      */
-    boolean logInput() default false;
+    boolean logInput() default true;
 
     /**
-     * 是否打印出参，默认不打印
+     * 是否打印出参，默认打印
      * @return
      */
-    boolean logOutput() default false;
+    boolean logOutput() default true;
 
     /**
      * 是否忽略业务异常，默认不忽略，抛出
