@@ -1,7 +1,7 @@
 package com.eparty.ccp.core.util.validate.function.handlers;
 
 import com.eparty.ccp.contract.annotation.Max;
-import com.eparty.ccp.contract.exception.ServiceException;
+import com.joindata.inf.common.basic.exceptions.ServiceException;
 
 import java.lang.reflect.Field;
 

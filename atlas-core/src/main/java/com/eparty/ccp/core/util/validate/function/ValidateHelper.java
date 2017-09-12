@@ -3,10 +3,10 @@ package com.eparty.ccp.core.util.validate.function;
 import com.eparty.ccp.contract.annotation.Max;
 import com.eparty.ccp.contract.annotation.Min;
 import com.eparty.ccp.contract.annotation.NotNull;
-import com.eparty.ccp.contract.exception.ServiceException;
 import com.eparty.ccp.core.util.validate.function.handlers.AbstractHandler;
 import com.eparty.ccp.core.util.validate.function.handlers.MaxHandler;
 import com.eparty.ccp.core.util.validate.function.handlers.NotNullHandler;
+import com.joindata.inf.common.basic.exceptions.ServiceException;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -20,7 +20,7 @@ public class ValidateHelper {
     /**
      * default value
      */
-    private static final ServiceException DEFAULT_EXCEPTION = new ServiceException("param_error", "参数校验异常");
+    private static final ServiceException DEFAULT_EXCEPTION = new ServiceException(500, "参数校验异常");
     private static final boolean DEFAULT_IS_DEEP = false;
     private static final boolean DEFAULT_FORCE_EXCEPTION = false;
 
